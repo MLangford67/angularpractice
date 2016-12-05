@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html ng='MyApp'>
   <head>
     <meta charset="utf-8">
     <title></title>
+     <base href='/' />
+    <!-- <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+} -->
+</style>
   </head>
-  <body>
+  <body ng-controller="MainController as main">
+    <a ui-sref="Page1">Page 1</a> | <a ui-sref="Page2">Page 2</a> | <a ui-sref="Nowhere">Nowhere</a>
+       <hr />
+       $state.current.templateUrl = {{main.$state.current.templateUrl}}
+       <hr />
+
+       <ui-view></ui-view>
+       <h1>Page 1</h1>
+       <p>
+           {{controller.message}}
+       </p>
+
+       <h1>Page 2</h1>
+       <p>
+           {{controller.message}}
+       </p>
+
+       <button ng-click="controller.doSomething()">Go!</button>
 
 
-<!-- <script src="~/Scripts/angular.js"></script>
-<script src="~/ngApp/app.js"></script> -->
-<script type='text/javascript' src="app.ng.js"></script>
-<!-- <script type="text/javascript" src="hyperpractice.js"></script> -->
-  </body>
+
+  <!-- <body ng-controller="MovieListController as controller" ng-cloak> -->
+<!-- <input type='text' ng-model='message'/><br/>-->
+<!-- data binding -->
+<!-- <h1>{{message}}</h1><br/> -->
+<!-- data binding using controllers -->
+<!-- <h2>{{vm.message}}</h2><br/>  -->
+<!-- <ul>
+ <li ng-repeat="friend in vm.friends">{{friend}}</li>
+</ul> -->
+<!-- <h2>What is your favorite color?</h2>
+<button ng-click="favorite.pickColor('red')">Red</button>
+<button ng-click="favorite.pickColor('blue')">Blue</button>
+<button ng-click="favorite.pickColor('green')">Green</button>
+<h2>Your favorite color is:</h2>
+<output>{{favorite.color}}</output> -->
+
+<!-- <input type='number' ng-model='a'/>
+<input type='number' ng-model='b'/>
+<button ng-click="calc.addNums(a,b)">Submit</button>
+<h1>{{calc.result}}</h1> -->
+
+<!-- <h1>Movie</h1>
+<ul>
+<li ng-repeat='movie in controller.movies'>{{movie.title}}</li>
+</ul> -->
+
+<script src='C:\Users\Michael\Documents\CCProjects\practiceang\bower_components\angular\angular.js'></script>
+<script src='C:\Users\Michael\Documents\CCProjects\practiceang\bower_components\angular-ui-router\release\angular-ui-router.js'></script>
+<script type'text/javascript'src='C:\Users\Michael\Documents\CCProjects\practiceang\hyperpractice.js'></script>
+
+</body>
 </html>

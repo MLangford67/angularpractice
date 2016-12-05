@@ -13,9 +13,7 @@
         "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "inlineSources": true,
-        "inlineSourceMap": true
+        "suppressImplicitAnyIndexErrors": true
     },
     "exclude": [
         "node_modules",
